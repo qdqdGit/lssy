@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
 import 'package:lssy/splash.dart';
+import 'package:lssy/layout_type.dart';
+import 'package:lssy/widgets/job_page.dart';
+
 void main(){
   runApp(App());
 }
@@ -33,8 +36,14 @@ class MainPage extends StatefulWidget{
 }
 
 class _MainPageState extends State<MainPage>{
+  LayoutType _layoutSelection = LayoutType.job;
 
-  BottomNavigationBarItem _buildItem({String icon,String text}){
+  Color _colorTabMatching({LayoutType layoutSelection}){
+    return _layoutSelection == layoutSelection ? Colors.cyan[300] : Colors.grey;
+  }
+
+  BottomNavigationBarItem _buildItem({String icon,LayoutType layoutSelection}){
+    String text = layoutName(layoutSelection);
     return BottomNavigationBarItem(
       icon: new Image.asset(
         icon,
@@ -57,36 +66,75 @@ class _MainPageState extends State<MainPage>{
       type: BottomNavigationBarType.fixed,
       items: [
         _buildItem(
-          icon: "assets/image/ic_main_tab_find_nor.png",
-          text: "职位"
+          icon: _layoutSelection == LayoutType.job
+              ? "assets/image/ic_main_tab_find_pre.png"
+              : "assets/image/ic_main_tab_find_nor.png",
+            layoutSelection: LayoutType.job
         ),
         _buildItem(
-            icon: "assets/image/ic_main_tab_company_nor.png",
-            text: "公司"
+            icon: _layoutSelection == LayoutType.company
+                ? "assets/image/ic_main_tab_company_pre.png"
+                : "assets/image/ic_main_tab_company_nor.png",
+            layoutSelection: LayoutType.company
         ),
         _buildItem(
-            icon: "assets/image/ic_main_tab_contacts_nor.png",
-            text: "消息"
+            icon: _layoutSelection == LayoutType.chat
+                ? "assets/image/ic_main_tab_contacts_pre.png"
+                : "assets/image/ic_main_tab_contacts_nor.png",
+            layoutSelection: LayoutType.chat
         ),
         _buildItem(
-            icon: "assets/image/ic_main_tab_my_nor.png",
-            text: "我的"
+            icon: _layoutSelection == LayoutType.mine
+                ? "assets/image/ic_main_tab_my_pre.png"
+                : "assets/image/ic_main_tab_my_nor.png",
+            layoutSelection: LayoutType.mine
         )
       ],
       onTap: _onSelectTab,
     );
   }
 
-  void _onSelectTab(int index) {
-    print("点击底部导航条:"+index.toString());
+  void _onLayoutSelected(LayoutType selection){
+    setState((){
+      _layoutSelection = selection;
+    });
+  }
+
+  void _onSelectTab(int index){
+    switch (index) {
+      case 0:
+        _onLayoutSelected(LayoutType.job);
+        break;
+      case 1:
+        _onLayoutSelected(LayoutType.company);
+        break;
+      case 2:
+        _onLayoutSelected(LayoutType.chat);
+        break;
+      case 3:
+        _onLayoutSelected(LayoutType.mine);
+        break;
+    }
+  }
+
+  Widget _buildBody() {
+    LayoutType layoutSelection = _layoutSelection;
+    switch (layoutSelection) {
+      case LayoutType.job:
+        return JobPage();
+      case LayoutType.company:
+        return JobPage();
+      case LayoutType.chat:
+        return JobPage();
+      case LayoutType.mine:
+        return JobPage();
+    }
   }
 
   @override
   Widget build(BuildContext context){
     return new Scaffold(
-      body: Center(
-        child: new Text("首页文字"),
-      ),
+      body: _buildBody(),
       bottomNavigationBar: _buildButtonNavBar()
     );
   }
