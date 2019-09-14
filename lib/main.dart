@@ -4,6 +4,8 @@ import 'package:lssy/splash.dart';
 import 'package:lssy/layout_type.dart';
 import 'package:lssy/widgets/job_page.dart';
 import 'package:lssy/widgets/company_page.dart';
+import 'package:lssy/widgets/chat_page.dart';
+import 'package:lssy/widgets/mine_page.dart';
 
 void main(){
   runApp(App());
@@ -127,9 +129,9 @@ class _MainPageState extends State<MainPage>{
       case LayoutType.company:
         return CompanyPage();
       case LayoutType.chat:
-        return JobPage();
+        return ChatPage();
       case LayoutType.mine:
-        return JobPage();
+        return MinePage();
     }
   }
 
