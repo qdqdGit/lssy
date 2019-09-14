@@ -20,28 +20,28 @@ class _CompanyPageState extends State<CompanyPage> with AutomaticKeepAliveClient
           {
             "id":"1",
             "company":"company1",
-            "logo":"logo1",
+            "logo":"https://img01.sogoucdn.com/app/a/100520021/be140097bf68ae649983e69b53427c68",
             "info":"info1",
             "hot":"hot1"
           },
           {
             "id":"2",
             "company":"company2",
-            "logo":"logo2",
+            "logo":"https://img03.sogoucdn.com/app/a/100520021/4bf5ad5f57be52d087bd39a155b605a2",
             "info":"info2",
             "hot":"hot2"
           },
           {
             "id":"3",
             "company":"company3",
-            "logo":"logo3",
+            "logo":"http://t1.hxzdhn.com/uploads/tu/201602/144/jptq5sgp5cq.jpg",
             "info":"info3",
             "hot":"hot3"
           },
           {
             "id":"4",
             "company":"company4",
-            "logo":"logo4",
+            "logo":"https://img02.sogoucdn.com/app/a/100520021/1969ca9ff5ba12dc926df5c1f7542e35",
             "info":"info4",
             "hot":"hot4"
           },

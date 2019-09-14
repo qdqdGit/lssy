@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:lssy/common/widget/scroll_img_item.dart';
 import 'package:lssy/model/company.dart';
