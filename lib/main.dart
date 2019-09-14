@@ -3,6 +3,7 @@ import 'package:redux/redux.dart';
 import 'package:lssy/splash.dart';
 import 'package:lssy/layout_type.dart';
 import 'package:lssy/widgets/job_page.dart';
+import 'package:lssy/widgets/company_page.dart';
 
 void main(){
   runApp(App());
@@ -119,11 +120,12 @@ class _MainPageState extends State<MainPage>{
 
   Widget _buildBody() {
     LayoutType layoutSelection = _layoutSelection;
+    print(layoutSelection);
     switch (layoutSelection) {
       case LayoutType.job:
         return JobPage();
       case LayoutType.company:
-        return JobPage();
+        return CompanyPage();
       case LayoutType.chat:
         return JobPage();
       case LayoutType.mine:
