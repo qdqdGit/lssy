@@ -54,6 +54,7 @@ class _MainPageState extends State<MainPage>{
 
   BottomNavigationBarItem _buildItem({String icon,LayoutType layoutSelection}){
     String text = layoutName(layoutSelection);
+
     return BottomNavigationBarItem(
       icon: new Image.asset(
         icon,
@@ -145,6 +146,16 @@ class _MainPageState extends State<MainPage>{
   @override
   Widget build(BuildContext context){
     return new Scaffold(
+      appBar: PreferredSize(
+          child: Offstage(
+            offstage: false,
+            child: AppBar(
+              backgroundColor: Colors.transparent,
+              elevation: 0,
+            ),
+          ),
+          preferredSize: Size.fromHeight(0),
+      ),
       body: _buildBody(),
       bottomNavigationBar: _buildButtonNavBar()
     );

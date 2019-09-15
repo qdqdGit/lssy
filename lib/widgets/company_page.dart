@@ -60,17 +60,6 @@ class _CompanyPageState extends State<CompanyPage> with AutomaticKeepAliveClient
 
   Widget build(BuildContext context){
     return new Scaffold(
-      appBar: new AppBar(
-        elevation: 0.0,
-        centerTitle: true,
-        title: new Text('公 司',style: new TextStyle(fontSize: 20.0,color: Colors.white)),
-        actions: <Widget>[
-          new IconButton(icon: new Icon(
-            Icons.search,
-            color: Colors.white,
-          ), onPressed: (){})
-        ],
-      ),
       body: new Center(
         child: FutureBuilder(
           future: _fetchCompanyList(),
