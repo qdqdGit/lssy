@@ -1,7 +1,5 @@
 # lssy
 
-丽水摄影博物馆ap重构
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
