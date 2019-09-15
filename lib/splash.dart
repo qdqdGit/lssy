@@ -43,13 +43,13 @@ class SplashState extends State<SplashPage>{
   @override
   Widget build(BuildContext context) {
     return new Material(
-      color: new Color.fromARGB(255, 0, 215, 198),
+      color: new Color.fromARGB(255, 241, 245, 251),
       child: Container(
         alignment: Alignment(0, -0.3),
         child: new Text(
-          "BOSS直聘",
+          "中国丽水摄影博物馆",
           style: new TextStyle(
-            color: Colors.white, fontSize: 50.0,fontWeight: FontWeight.bold
+            color: new Color.fromARGB(255, 49, 74, 67), fontSize: 40.0,fontWeight: FontWeight.normal,fontFamily:"华文新魏"
           ),
         ),
       ),

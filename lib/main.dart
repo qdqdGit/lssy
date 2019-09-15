@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:redux/redux.dart';
 import 'package:lssy/splash.dart';
 import 'package:lssy/layout_type.dart';
@@ -9,6 +10,12 @@ import 'package:lssy/widgets/mine_page.dart';
 
 void main(){
   runApp(App());
+
+  // 设置透明状态栏
+  SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  );
+  SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
 }
 class App extends StatelessWidget {
   final Store<int> store;

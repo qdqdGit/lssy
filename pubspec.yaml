@@ -73,7 +73,7 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   fonts:
-    - family: hwxw
+    - family: 华文新魏
       fonts:
         - asset: assets/fonts/hwxw.ttf
     - family: NotoSans
