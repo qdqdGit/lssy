@@ -7,6 +7,7 @@ import 'package:lssy/widgets/job_page.dart';
 import 'package:lssy/widgets/company_page.dart';
 import 'package:lssy/widgets/chat_page.dart';
 import 'package:lssy/widgets/mine_page.dart';
+import 'package:lssy/widgets/home_page.dart';
 
 void main(){
   runApp(App());
@@ -16,6 +17,8 @@ void main(){
     statusBarColor: Colors.transparent,
   );
   SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
+
+
 }
 class App extends StatelessWidget {
   final Store<int> store;
@@ -133,7 +136,7 @@ class _MainPageState extends State<MainPage>{
     print(layoutSelection);
     switch (layoutSelection) {
       case LayoutType.job:
-        return JobPage();
+        return HomePage();
       case LayoutType.company:
         return CompanyPage();
       case LayoutType.chat:
@@ -146,16 +149,6 @@ class _MainPageState extends State<MainPage>{
   @override
   Widget build(BuildContext context){
     return new Scaffold(
-      appBar: PreferredSize(
-          child: Offstage(
-            offstage: false,
-            child: AppBar(
-              backgroundColor: Colors.transparent,
-              elevation: 0,
-            ),
-          ),
-          preferredSize: Size.fromHeight(0),
-      ),
       body: _buildBody(),
       bottomNavigationBar: _buildButtonNavBar()
     );
