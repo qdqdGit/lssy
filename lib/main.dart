@@ -150,7 +150,7 @@ class _MainPageState extends State<MainPage>{
   Widget build(BuildContext context){
     return new Scaffold(
       body: _buildBody(),
-      bottomNavigationBar: _buildButtonNavBar()
+//      bottomNavigationBar: _buildButtonNavBar()
     );
   }
 }
