@@ -54,39 +54,61 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                   flex: 1,
                   child: Container(
                     height: 400,
-                    color: Colors.yellow,
+                    child: new Image.asset("assets/image/home/btn_1.png"),
+                    alignment: Alignment.bottomCenter,
+//                    child: new FlatButton(
+//                        onPressed: null,
+//                        child: new Text("首页")
+//                    ),
+//                    color: Colors.yellow,
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Container(
+                    height: 420,
+                    alignment: Alignment.bottomCenter,
+                    child: new Image.asset("assets/image/home/btn_2.png"),
                   ),
                 ),
                 Expanded(
                   flex: 1,
                   child: Container(
                     height: 400,
-                    color: Colors.red,
+                    alignment: AlignmentDirectional(0,0),
+                    child: new Image.asset("assets/image/home/btn_3.png"),
                   ),
                 ),
                 Expanded(
                   flex: 1,
                   child: Container(
                     height: 400,
-                    color: Colors.green,
+                    child: new Image.asset("assets/image/home/btn_4.png"),
                   ),
                 ),
                 Expanded(
                   flex: 1,
                   child: Container(
                     height: 400,
-                    color: Colors.grey,
+                    alignment: AlignmentDirectional(0,0),
+                    child: new Image.asset("assets/image/home/btn_5.png"),
                   ),
                 ),
                 Expanded(
                   flex: 1,
                   child: Container(
                     height: 400,
-                    color: Colors.cyan,
+                    alignment: AlignmentDirectional(0,0),
+                    child: new Image.asset("assets/image/home/btn_6.png"),
                   ),
                 ),
               ],
             ),
+          ),
+          new Container(
+            width: double.infinity,
+            height: 20,
+            color: Colors.red,
           )
         ],
       ),

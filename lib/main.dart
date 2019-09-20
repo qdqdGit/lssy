@@ -75,38 +75,38 @@ class _MainPageState extends State<MainPage>{
     );
   }
 
-  Widget _buildButtonNavBar(){
-    return BottomNavigationBar(
-      type: BottomNavigationBarType.fixed,
-      items: [
-        _buildItem(
-          icon: _layoutSelection == LayoutType.job
-              ? "assets/image/ic_main_tab_find_pre.png"
-              : "assets/image/ic_main_tab_find_nor.png",
-            layoutSelection: LayoutType.job
-        ),
-        _buildItem(
-            icon: _layoutSelection == LayoutType.company
-                ? "assets/image/ic_main_tab_company_pre.png"
-                : "assets/image/ic_main_tab_company_nor.png",
-            layoutSelection: LayoutType.company
-        ),
-        _buildItem(
-            icon: _layoutSelection == LayoutType.chat
-                ? "assets/image/ic_main_tab_contacts_pre.png"
-                : "assets/image/ic_main_tab_contacts_nor.png",
-            layoutSelection: LayoutType.chat
-        ),
-        _buildItem(
-            icon: _layoutSelection == LayoutType.mine
-                ? "assets/image/ic_main_tab_my_pre.png"
-                : "assets/image/ic_main_tab_my_nor.png",
-            layoutSelection: LayoutType.mine
-        )
-      ],
-      onTap: _onSelectTab,
-    );
-  }
+//  Widget _buildButtonNavBar(){
+//    return BottomNavigationBar(
+//      type: BottomNavigationBarType.fixed,
+//      items: [
+//        _buildItem(
+//          icon: _layoutSelection == LayoutType.job
+//              ? "assets/image/ic_main_tab_find_pre.png"
+//              : "assets/image/ic_main_tab_find_nor.png",
+//            layoutSelection: LayoutType.job
+//        ),
+//        _buildItem(
+//            icon: _layoutSelection == LayoutType.company
+//                ? "assets/image/ic_main_tab_company_pre.png"
+//                : "assets/image/ic_main_tab_company_nor.png",
+//            layoutSelection: LayoutType.company
+//        ),
+//        _buildItem(
+//            icon: _layoutSelection == LayoutType.chat
+//                ? "assets/image/ic_main_tab_contacts_pre.png"
+//                : "assets/image/ic_main_tab_contacts_nor.png",
+//            layoutSelection: LayoutType.chat
+//        ),
+//        _buildItem(
+//            icon: _layoutSelection == LayoutType.mine
+//                ? "assets/image/ic_main_tab_my_pre.png"
+//                : "assets/image/ic_main_tab_my_nor.png",
+//            layoutSelection: LayoutType.mine
+//        )
+//      ],
+//      onTap: _onSelectTab,
+//    );
+//  }
 
   void _onLayoutSelected(LayoutType selection){
     setState((){
