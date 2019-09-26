@@ -49,24 +49,20 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
             width: double.infinity,
             child: new Flex(
               direction: Axis.horizontal,
+              textBaseline:TextBaseline.alphabetic,
+              crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 Expanded(
                   flex: 1,
                   child: Container(
-                    height: 400,
+                    height: 400, // 以400作为比例尺寸688
                     child: new Image.asset("assets/image/home/btn_1.png"),
-                    alignment: Alignment.bottomCenter,
-//                    child: new FlatButton(
-//                        onPressed: null,
-//                        child: new Text("首页")
-//                    ),
-//                    color: Colors.yellow,
                   ),
                 ),
                 Expanded(
                   flex: 1,
                   child: Container(
-                    height: 420,
+                    height: 410,
                     alignment: Alignment.bottomCenter,
                     child: new Image.asset("assets/image/home/btn_2.png"),
                   ),
