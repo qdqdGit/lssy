@@ -11,6 +11,18 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
   // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 
+  Widget navBtn(double height,Image btnImg){
+    return Container(
+      height: height,
+      alignment: Alignment.bottomCenter,
+      child: btnImg,
+      margin: EdgeInsets.only(right: 4),
+      decoration: new BoxDecoration(
+          boxShadow:[BoxShadow(color: Color.fromARGB(110, 0, 0, 0),offset: Offset(0, 20),blurRadius: 10,spreadRadius: -10)]
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -26,6 +38,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
       body: new Column(
       children: <Widget>[
           new Container(
+            padding: EdgeInsets.only(left: 10,right: 10),
             width: double.infinity,
             child: new Column(
              children: <Widget>[
@@ -45,7 +58,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
             margin: const EdgeInsets.only(top: 10)
           ),
           new Container(
-            padding: const EdgeInsets.only(top: 40),
+            padding: EdgeInsets.only(top:80, left: 10,right: 10),
             width: double.infinity,
             child: new Flex(
               direction: Axis.horizontal,
@@ -54,58 +67,31 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
               children: <Widget>[
                 Expanded(
                   flex: 1,
-                  child: Container(
-                    height: 400, // 以400作为比例尺寸688
-                    child: new Image.asset("assets/image/home/btn_1.png"),
-                  ),
+                  child: navBtn(380, new Image.asset("assets/image/home/btn_1.png")),
                 ),
                 Expanded(
                   flex: 1,
-                  child: Container(
-                    height: 410,
-                    alignment: Alignment.bottomCenter,
-                    child: new Image.asset("assets/image/home/btn_2.png"),
-                  ),
+                  child: navBtn(410,new Image.asset("assets/image/home/btn_2.png"))
                 ),
                 Expanded(
                   flex: 1,
-                  child: Container(
-                    height: 400,
-                    alignment: AlignmentDirectional(0,0),
-                    child: new Image.asset("assets/image/home/btn_3.png"),
-                  ),
+                  child: navBtn(421, new Image.asset("assets/image/home/btn_3.png"))
                 ),
                 Expanded(
                   flex: 1,
-                  child: Container(
-                    height: 400,
-                    child: new Image.asset("assets/image/home/btn_4.png"),
-                  ),
+                  child: navBtn(379, new Image.asset("assets/image/home/btn_4.png"))
                 ),
                 Expanded(
                   flex: 1,
-                  child: Container(
-                    height: 400,
-                    alignment: AlignmentDirectional(0,0),
-                    child: new Image.asset("assets/image/home/btn_5.png"),
-                  ),
+                  child: navBtn(400, new Image.asset("assets/image/home/btn_5.png"))
                 ),
                 Expanded(
                   flex: 1,
-                  child: Container(
-                    height: 400,
-                    alignment: AlignmentDirectional(0,0),
-                    child: new Image.asset("assets/image/home/btn_6.png"),
-                  ),
+                  child: navBtn(415, new Image.asset("assets/image/home/btn_6.png"))
                 ),
               ],
             ),
           ),
-          new Container(
-            width: double.infinity,
-            height: 20,
-            color: Colors.red,
-          )
         ],
       ),
       );
