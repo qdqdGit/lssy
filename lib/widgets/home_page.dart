@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lssy/widgets/component/CompanyItem.dart';
+import 'package:lssy/widgets/chat_page.dart';
 
 class HomePage extends StatefulWidget{
   @override
@@ -45,6 +46,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
               sub: "已上市移动互联网",
               onPressed: (){
                 print("手势识别");
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> ChatPage()));
               },
               herLogo: "heroLogo1",
             )
