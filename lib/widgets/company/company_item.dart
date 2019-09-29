@@ -29,6 +29,7 @@ class CompanyItem extends StatelessWidget{
                       child: Image.network(
                         company.logo,
                         width: 40,
+                        height: 40,
                       )
                   ),
                 ),
