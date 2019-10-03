@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lssy/widgets/component/PageHeader.dart';
 import 'dart:ui';
 
 class ArticlePage extends StatefulWidget {
@@ -13,10 +14,16 @@ class _ArticlePageState extends State<ArticlePage>{
   Widget build(BuildContext context) {
     return new Scaffold(
       body: new Container(
-        padding: EdgeInsets.only(top: statusBarHeight,left: 20,right: 20),
+        padding: EdgeInsets.only(top: 10),
+        color: Color.fromARGB(255, 234, 233, 230),
         child:ListView(
+          padding: EdgeInsets.only(top: statusBarHeight,left: 20,right: 20),
           children: <Widget>[
             new Container(
+                child: PageHeader()
+            ),
+            new Container(
+              padding: EdgeInsets.only(top: 30),
                 child: new Text(
                   "光影世纪昭风华",
                   style: new TextStyle(fontSize: 28,fontFamily: 'NotoSans',letterSpacing: 2),
