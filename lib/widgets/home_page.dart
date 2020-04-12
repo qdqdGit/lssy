@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lssy/unit/Adapt.dart';
 import 'package:lssy/widgets/component/VerticalTextButton.dart';
 import 'package:lssy/widgets/article_page.dart';
 import 'package:lssy/widgets/theme_page.dart';
@@ -67,7 +68,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                         return new ThemePage();
                       }));
                     },
-                    child: navBtn(380, new Image.asset("assets/image/home/btn_1.png")),
+                    child: navBtn(Adapt.px(688), new Image.asset("assets/image/home/btn_1.png")),
                   )
                 ),
                 Expanded(
@@ -76,7 +77,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                     onTap: (){
                       print("摄影技术发展史");
                     },
-                    child: navBtn(410,new Image.asset("assets/image/home/btn_2.png")),
+                    child: navBtn(Adapt.px(706),new Image.asset("assets/image/home/btn_2.png")),
                   )
                 ),
                 Expanded(
@@ -85,7 +86,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                     onTap: (){
                       print("中国制造的摄像机");
                     },
-                    child: navBtn(421, new Image.asset("assets/image/home/btn_3.png")),
+                    child: navBtn(Adapt.px(725), new Image.asset("assets/image/home/btn_3.png")),
                   )
                 ),
                 Expanded(
@@ -94,7 +95,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                     onTap: (){
                       print("中国摄影史");
                     },
-                    child: navBtn(379, new Image.asset("assets/image/home/btn_4.png")),
+                    child: navBtn(Adapt.px(659), new Image.asset("assets/image/home/btn_4.png")),
                   )
                 ),
                 Expanded(
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                     onTap: (){
                       print("丽水摄影文化");
                     },
-                    child: navBtn(400, new Image.asset("assets/image/home/btn_5.png")),
+                    child: navBtn(Adapt.px(688), new Image.asset("assets/image/home/btn_5.png")),
                   )
                 ),
                 Expanded(
@@ -133,7 +134,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                         }
                       );
                     },
-                    child: navBtn(415, new Image.asset("assets/image/home/btn_6.png")),
+                    child: navBtn(Adapt.px(715), new Image.asset("assets/image/home/btn_6.png")),
                   )
                 ),
 
