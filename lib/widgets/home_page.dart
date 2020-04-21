@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lssy/unit/Adapt.dart';
+import 'package:lssy/widgets/bookmark_page.dart';
 import 'package:lssy/widgets/component/VerticalTextButton.dart';
 import 'package:lssy/widgets/article_page.dart';
 import 'package:lssy/widgets/theme_page.dart';
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                   child: new GestureDetector(
                     onTap: (){
                       Navigator.push(context,new MaterialPageRoute(builder: (BuildContext context){
-                        return new ThemePage();
+                        return new BookmarkPage();
                       }));
                     },
                     child: navBtn(Adapt.px(688), new Image.asset("assets/image/home/btn_1.png")),

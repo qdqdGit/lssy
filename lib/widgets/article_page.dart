@@ -40,7 +40,7 @@ class _ArticlePageState extends State<ArticlePage>{
                   textAlign: TextAlign.justify,//decorationStyle
                   textDirection: TextDirection.ltr,
                   text: TextSpan(
-                    style: new TextStyle(color:Colors.black,fontSize: 19,fontFamily: 'NotoSans',letterSpacing: 2),
+                    style: new TextStyle(color:Colors.black,fontSize: 19,fontFamily: 'NotoSans',height: 1.8,letterSpacing: 2),
                     children: <TextSpan>[
                         TextSpan(
                             text: articleText1+"\n\n",
@@ -57,11 +57,6 @@ class _ArticlePageState extends State<ArticlePage>{
                     ],
                   ),
               )
-              /*new Text(
-                articleText,
-                textAlign: TextAlign.justify,
-                style: new TextStyle(fontSize: 18,fontFamily: 'NotoSans',letterSpacing: 2),
-              ),*/
             )
           ],
         )
