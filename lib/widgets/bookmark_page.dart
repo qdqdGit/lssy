@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/cupertino.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:lssy/unit/Adapt.dart';
 import 'package:lssy/widgets/component/PageHeader.dart';
@@ -12,54 +13,137 @@ class BookmarkPage extends StatefulWidget {
 }
 
 class _BookmarkPage extends State<BookmarkPage>{
-  final double statusBarHeight = MediaQueryData.fromWindow(window).padding.top;
+  Color _tabColor = Colors.white;
+  int _index = 0;
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
       backgroundColor: Color.fromARGB(255, 234, 233, 230),
       body: new Container(
-        padding: EdgeInsets.only(top: statusBarHeight,right: Adapt.px(37),bottom: Adapt.px(126)),
-        child: new Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.max,
+        padding: EdgeInsets.only(top: 10,right: Adapt.px(37)),
+        child: new ListView(
           children: <Widget>[
             new Container(
-              height: Adapt.px(238),
-              child: new Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  new Container(
-                    child: new PageHeader(),
-                    height: Adapt.px(128),
-                    alignment: Alignment.centerRight,
-                  ),
-                  new Container(
-                    color: Colors.red,
-                    height: Adapt.px(110),
-                  )
-                ],
+              child: new PageHeader(),
+              padding: new EdgeInsets.only(bottom: Adapt.px(42)),
+            ),
+            new Container(
+              height: Adapt.px(110),
+              color: Colors.red,
+              child: new Flex(
+                  direction:Axis.horizontal,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 333,
+                      child: new Container(
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 381,
+                      child: new Container(
+                        color: Colors.yellow,
+                      ),
+                    )
+                  ],
               ),
             ),
             new Container(
-              height: 100,
-              color: Colors.amber,
+              margin: new EdgeInsets.only(top: Adapt.px(22)),
+              height: Adapt.px(247),
+              child: new Flex(
+                  direction: Axis.horizontal,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 333,
+                      child: new Container(
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 381,
+                      child: new Container(
+                        color: Colors.yellow,
+                      ),
+                    )
+                  ]
+              ),
             ),
             new Container(
-              height: 100,
-              color: Colors.blue,
+              margin: new EdgeInsets.only(top: Adapt.px(22)),
+              height: Adapt.px(247),
+              child: new Flex(
+                  direction: Axis.horizontal,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 333,
+                      child: new Container(
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 381,
+                      child: new Container(
+                        color: Colors.yellow,
+                      ),
+                    )
+                  ]
+              ),
             ),
             new Container(
-              height: 100,
-              color: Colors.deepPurple,
+              margin: new EdgeInsets.only(top: Adapt.px(22)),
+              height: Adapt.px(247),
+              child: new Flex(
+                  direction: Axis.horizontal,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 333,
+                      child: new Container(
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 381,
+                      child: new Container(
+                        color: Colors.yellow,
+                      ),
+                    )
+                  ]
+              ),
             ),
             new Container(
-              height: 100,
-              color: Colors.green,
-            )
+              margin: new EdgeInsets.only(top: Adapt.px(22)),
+              height: Adapt.px(247),
+              child: new Flex(
+                  direction: Axis.horizontal,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 333,
+                      child: new Container(
+                        color: Colors.red,
+                      ),
+                    ),
+                    Expanded(
+                      flex: 381,
+                      child: new Container(
+                        color: Colors.yellow,
+                      ),
+                    )
+                  ]
+              ),
+            ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: (){
+          print("点击按钮");
+        },
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
+
 }
