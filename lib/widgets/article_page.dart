@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
 import 'package:lssy/widgets/component/PageHeader.dart';
 import 'dart:ui';
-
+// 前言页
 class ArticlePage extends StatefulWidget {
   @override
   _ArticlePageState createState() => _ArticlePageState();
 }
 class _ArticlePageState extends State<ArticlePage>{
+  // 文章内容
   final double statusBarHeight = MediaQueryData.fromWindow(window).padding.top;
   String articleText1 = '从公元前五世纪中国古代学者在小孔成像方面的探索、十六世纪欧洲文艺复兴时期出现暗箱、十九世纪初欧洲研究者对各种光敏化合物进行研究并拍摄出世界上第一张照片，直到1839年8月19日法国向世界公布摄影术发明，人类通过不断研究探索，终于实现了记录影像的梦想。';
   String articleText2 = '摄影术发明后，人们不断改进相机构造、感光材料和照片制作工艺，相机功能不断改良，成像技术从银版法、湿版法、干版法，再到胶片和数码技术，这一步步的演进过程，极大地反映出人类智慧的创造性和对科学永无止境的探索精神。';

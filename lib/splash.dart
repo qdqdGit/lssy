@@ -22,7 +22,7 @@ class SplashState extends State<SplashPage>{
                   builder: (BuildContext context,Widget child){
                     return Opacity(
                       opacity: animation.value,
-                      child: new MainPage(title:'Boss直聘'),
+                      child: new MainPage(title:'启动页'),
                     );
                   },
                 );

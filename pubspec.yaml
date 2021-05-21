@@ -14,7 +14,7 @@ description: 丽水摄影博物馆app重构
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.2.2 <3.0.0"
 
 dependencies:
   flutter:
@@ -42,6 +42,7 @@ flutter:
   assets:
     - assets/image/home/
     - assets/image/
+    - assets/image/upload/
   # To add assets to your application, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
@@ -76,6 +77,9 @@ flutter:
     - family: 华文新魏
       fonts:
         - asset: assets/fonts/hwxw.ttf
+    - family: 汉仪细圆简体
+      fonts:
+        - asset: assets/fonts/HYe1gj.ttf
     - family: NotoSans
       fonts:
         - asset: assets/fonts/NotoSansSC-Regular.ttf

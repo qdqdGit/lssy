@@ -4,16 +4,14 @@ import 'package:redux/redux.dart';
 import 'package:lssy/splash.dart';
 import 'package:lssy/widgets/home_page.dart';
 
+// 入口方法
 void main(){
   runApp(App());
-
   // 设置透明状态栏
   SystemUiOverlayStyle systemUiOverlayStyle = SystemUiOverlayStyle(
     statusBarColor: Colors.transparent,
   );
   SystemChrome.setSystemUIOverlayStyle(systemUiOverlayStyle);
-
-
 }
 class App extends StatelessWidget {
   final Store<int> store;
@@ -30,7 +28,7 @@ class App extends StatelessWidget {
         primaryColor: new Color.fromARGB(255, 0, 215, 198),
         accentColor: Colors.cyan[300],
       ),
-      home: SplashPage(),
+      home: SplashPage(),//启动页
     );
   }
 }
@@ -47,7 +45,7 @@ class _MainPageState extends State<MainPage>{
   @override
   Widget build(BuildContext context){
     return new Scaffold(
-      body:  HomePage()
+      body:  HomePage() //主页面
     );
   }
 }
