@@ -3,6 +3,7 @@ import 'package:lssy/unit/Adapt.dart';
 import 'package:lssy/widgets/bookmark_page.dart';
 import 'package:lssy/widgets/component/VerticalTextButton.dart';
 import 'package:lssy/widgets/article_page.dart';
+import 'package:lssy/widgets/test_page.dart';
 import 'package:lssy/widgets/theme_page.dart';
 
 class HomePage extends StatefulWidget{
@@ -77,6 +78,9 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin<
                   child: new GestureDetector(
                     onTap: (){
                       print("摄影技术发展史");
+                      Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+                        return TestPage();
+                      }));
                     },
                     child: navBtn(Adapt.px(706),new Image.asset("assets/image/home/btn_2.png")),
                   )
