@@ -80,6 +80,9 @@ flutter:
     - family: 汉仪细圆简体
       fonts:
         - asset: assets/fonts/HYe1gj.ttf
+    - family: 汉仪大黑简
+      fonts:
+        - asset: assets/fonts/hyb2gj.ttf
     - family: NotoSans
       fonts:
         - asset: assets/fonts/NotoSansSC-Regular.ttf

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart' as prefix0;
+import 'package:lssy/unit/Adapt.dart';
 import 'package:lssy/widgets/component/PageHeader.dart';
 import 'dart:ui';
 // 前言页
@@ -31,17 +32,23 @@ class _ArticlePageState extends State<ArticlePage>{
               padding: EdgeInsets.only(top: 30),
                 child: new Text(
                   "光影世纪昭风华",
-                  style: new TextStyle(fontSize: 28,fontFamily: 'NotoSans',letterSpacing: 2),
+                  style: new TextStyle(
+                      fontSize: Adapt.px(75),
+                      fontFamily: '汉仪大黑简',
+                      letterSpacing: 2,
+                      height: 1.2,
+                      color: Color.fromARGB(255, 68, 68, 68)
+                  ),
                   textAlign: TextAlign.center,
                 )
             ),
             new Container(
-              padding: EdgeInsets.only(bottom: 20),
+              padding: EdgeInsets.only(bottom: 20,top: Adapt.px(80)),
               child: new RichText(
                   textAlign: TextAlign.justify,//decorationStyle
                   textDirection: TextDirection.ltr,
                   text: TextSpan(
-                    style: new TextStyle(color:Colors.black,fontSize: 19,fontFamily: 'NotoSans',height: 1.8,letterSpacing: 2),
+                    style: new TextStyle(color:Color.fromARGB(255, 38, 38, 38),fontSize: Adapt.px(28),fontFamily: '汉仪细圆简体',height: 1.8,letterSpacing: 2),
                     children: <TextSpan>[
                         TextSpan(
                             text: articleText1+"\n\n",
