@@ -9,7 +9,7 @@ import 'package:lssy/widgets/component/PageHeader.dart';
 import 'package:lssy/widgets/component/TextListItem.dart';
 
 import 'component/BookmarkSynopsis.dart';
-
+import 'package:lssy/widgets/article_page.dart';
 //TODO:书签页
 class BookmarkPage extends StatefulWidget {
   @override
@@ -35,14 +35,21 @@ class _BookmarkPage extends State<BookmarkPage>{
             new Container(
               child: new BookmarkHead(
                 height: Adapt.px(110),
-                left: new Container(
+                left: new InkResponse(
+                  child: new Container(
                     child: new Text('前言',style: TextStyle(
-                        fontSize: Adapt.px(40),
-                        fontFamily: '汉仪细圆简体',
-                        fontWeight: FontWeight.w400,
-                        color: Color.fromARGB(255, 71, 71, 71)
+                      fontSize: Adapt.px(40),
+                      fontFamily: '汉仪细圆简体',
+                      fontWeight: FontWeight.w400,
+                      color: Color.fromARGB(255, 71, 71, 71),
                     )),
                     alignment: Alignment.center,
+                  ),
+                  onTap: (){
+                    Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+                      return new ArticlePage();
+                    }));
+                  },
                 ),
                 right: new Container(
                   child: new Image(
@@ -121,25 +128,6 @@ class _BookmarkPage extends State<BookmarkPage>{
           ],
         ),
       ),
-      // floatingActionButton: FloatingActionButton(
-      //   isExtended: true,
-      //   child: Container(
-      //     width: Adapt.px(82),
-      //     height: Adapt.px(82),
-      //     child: Text('首'),
-      //     alignment: Alignment.center,
-      //     decoration: BoxDecoration(
-      //       color: Color.fromARGB(255, 243, 105, 73),
-      //       borderRadius: BorderRadius.circular(50)
-      //     ),
-      //   ),
-      //   backgroundColor: Colors.white,
-      //   shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight: Radius.circular(10))),
-      //   onPressed: (){
-      //     //TODO:应当返回到首页,不为上一页
-      //     Navigator.pop(context);
-      //   },
-      // ),
       floatingActionButton:Container(
         child:Ink(
           width: Adapt.px(162),
